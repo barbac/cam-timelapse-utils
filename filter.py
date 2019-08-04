@@ -23,7 +23,7 @@ def date_string(timestamp):
 def main(input_dir, output_dir=None):
     image_files = os.listdir(input_dir)
     image_files.sort()
-    if output_dir:
+    if output_dir and not os.path.exists(output_dir):
         os.mkdir(output_dir)
 
     image_a = None
