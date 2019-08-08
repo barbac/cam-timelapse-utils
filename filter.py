@@ -32,9 +32,12 @@ def main(input_dir, output_dir=None):
     frames_count = 0
 
     for i, image_file in enumerate(image_files):
-        print(image_file)
+        print(i, image_file)
 
         image_b = cv2.imread(os.path.join(input_dir, image_file))
+        if image_b is None:
+            print('Empty image. Skipping')
+            continue
         gray_b = cv2.cvtColor(image_b, cv2.COLOR_BGR2GRAY)
         gray_b = cv2.GaussianBlur(gray_b, (21, 21), 0)
         if image_a is None:
