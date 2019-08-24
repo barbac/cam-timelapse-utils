@@ -13,6 +13,29 @@ python filter.py input_dir
 python filter.py input_dir output_dir
 `
 
+## viewer.py
+`
+python viewer.py input_dir [start_index]
+`
+Display images one by one from a directory.
+
+### key bindings
+`
+space
+` Pause/Resume slide show.
+
+`
+a
+` Previews image.
+
+`
+d
+` Next image.
+
+`
+p
+` Log the image path to the console
+
 ## timelapse.sh
 Naive shell script to capture pictures every second from a camera behind an http web server.
 
