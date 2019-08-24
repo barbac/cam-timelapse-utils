@@ -19,3 +19,10 @@ Naive shell script to capture pictures every second from a camera behind an http
 `
 ./timelapse.sh <output directory> <url>
 `
+
+## cams.exs
+Script in elixir to take snapshots by a set interval from multiple cameras.
+Supports initializing the cameras after crashes or disconnects
+`
+elixir cams.exs
+`
