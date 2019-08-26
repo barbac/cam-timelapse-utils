@@ -21,11 +21,11 @@ def main(input_dir, image_index=0):
     print(f"Files: {files_total}.\nMins to watch: {files_total*start_interval/1000/60}")
 
     image_index = int(image_index)
-    while True:
+    while image_index < files_total:
         image_file = image_files[image_index]
         image = cv2.imread(os.path.join(input_dir, image_file))
         print(
-            f"{image_file}\t\t\tcurrent: {image_index}/{files_total}",
+            f"{image_file}\t\t\tcurrent: {image_index + 1}/{files_total}",
             end="\r",
             flush=True,
         )
